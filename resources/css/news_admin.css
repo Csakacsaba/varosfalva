@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(119, 119, 119, 0.21);
+    color: #333;
+}
+
+p {
+    font-family: 'Arima Madurai', cursive;
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fejléc formázása */
+.cim {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Hírfelviteli űrlap */
+.news_upload {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.news_upload form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news_upload input[type="text"],
+.news_upload select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.news_upload input[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.news_upload input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Hírek megjelenítése */
+.news {
+    width: 80%;
+    margin: auto;
+}
+
+.news_item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.news_item h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news_item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.news_item .delete-button {
+    display: flex;
+    margin: auto;
+    padding: 5px 10px;
+    background-color: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+
+}
+
+.news_item .delete-button:hover {
+    background-color: #e74c3c;
+}

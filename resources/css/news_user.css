@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgb(6, 53, 38));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif; /* Roboto betűtípus használata */
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.76);
+    border-radius: 15px;
+}
+
+.news {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius:15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, max-width 0.3s ease-in-out;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.news:hover {
+    transform: scale(1.01);
+}
+
+.news-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+}
+
+.news_content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    text-align: justify;
+}
+
+.news_title {
+    text-align: center;
+    color: rgb(252, 251, 215);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.news_heading {
+    background-color: rgba(76, 89, 77, 0.8); /* Facebook kék */
+    color: #fff;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.news_meta {
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px; /* Kisebb betűméret */
+    color: #3b3b3b; /* Szürke szín */
+}
+.date {
+    color: #050505;
+}
+.news_meta p {
+    margin-bottom: 10px;
+    text-wrap: normal;
+    max-width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .news {
+        max-width: 100%;
+    }
+}

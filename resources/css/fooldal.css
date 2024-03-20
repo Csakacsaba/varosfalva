@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html {
+    height: 100%;
+}
+body {
+    background-image: url('/public/storage/fooldal/borus-kep-varosfalva2.jpg');
+    background-repeat: no-repeat;
+    /*background-size: cover; */
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: Robot, sans-serif;
+}
+
+
+
+/*WEATHER*/
+
+
+
+.background{
+    background-image: linear-gradient(to top, rgb(40, 40, 73, 0.8), rgba(46, 56, 77, 0.7));
+    padding-bottom: 15px
+
+}
+.bottom-short-presentation {
+    display: flex;
+    flex-direction: row;
+}
+.bottom-short-presentation-p {
+    padding: 5px;
+}
+
+
+
+/*CONTENT*/
+.language-button{
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: palegreen;
+}
+
+.content .short-presentation {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    position: relative;
+    flex-direction: row;
+    margin-bottom: 55px;
+}
+.content .short-presentation .presentation-img {
+    margin-top: 65px;
+    width: 510px;
+    height: 510px;
+    display: block;
+    border-radius: 50% ;
+    box-shadow: 18px 10px 35px rgb(6, 38, 38,.5);
+    transition: transform 0.5s ease;
+}
+.content .short-presentation .picture-left .presentation-img:hover {
+    transform: translate(0%, 0%) scale(1.08);
+}
+.content .short-presentation h1  {
+    font-size: 40px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+    color: rgb(252, 251, 215);
+    text-shadow: 0 4px 17px rgba(6, 38, 38,.3);
+    font-family: 'Roboto', sans-serif;
+}
+.content .text-right {
+    margin-top: 50px;
+    max-width: 50%;
+}
+.content .short-presentation .text-left {
+    max-width: 55%;
+}
+
+.presentation-text{
+    text-align: center;
+    margin-bottom:20px ;
+    color: #000000;
+    line-height: 2rem;
+    font-size: 21px;
+    text-shadow: 18px 10px 15px rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+.videos {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 25px;
+    margin: 0 auto;
+    gap: 15px;
+    padding: 15px;
+    /*background-color: #1a202c;*/
+    /*box-shadow: 18px 10px 55px rgba(255, 255, 255, 0.1) ;*/
+}
+.background {
+    border-left: 2px dashed #525252;
+    border-right: 2px dashed #626262;
+    margin: 0 auto;
+}
+.video {
+    border-radius: 30px;
+}
+.video-description {
+    display: flex;
+    flex-direction: column;
+}
+.video-description p{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px ;
+    margin: 20px 0;
+}
+
+/*MAPP*/
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 35%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.map-container iframe {
+    margin-top: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 90%;
+    border: none;
+    border-radius: 15px;
+}
+.content h2 {
+    text-align: center;
+    padding: 15px;
+    margin: 15px 0;
+    color: rgb(252, 251, 215);
+    text-shadow: 18px 10px 35px rgb(6, 38, 38);
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.content .elhelyezkedes{
+    margin-bottom: 45px;
+}
+.content .elhelyezkedes h2{
+    text-align: center;
+    padding: 40px 15px 15px 15px;
+    margin-bottom: 30px;
+    color: rgb(252, 251, 215);
+    text-shadow: 18px 10px 35px rgb(6, 38, 38);
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+.content .elhelyezkedes p{
+    font-size: 20px ;
+    text-indent: 17px;
+    margin: 15px auto;
+    text-align: justify;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2.0rem;
+    text-shadow:  18px 10px 35px rgb(6, 38, 38);
+    max-width: 1500px;
+    padding: 0 20px;
+}
+@media (max-width: 1358px) {
+    .videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        margin: auto auto;
+        gap: 10px;
+
+    }
+    .video {
+        margin: 0 auto;
+    }
+    .bottom-short-presentation {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 1058px) {
+    .videos {
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        gap: 10px;
+        width: 100%;
+    }
+    .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .content .short-presentation .presentation-img {
+        width: 320px;
+        height: 320px;
+    }
+    .content .short-presentation img:hover {
+        transform: translate(0%, 0%) scale(1.1);
+    }
+    .content .short-presentation {
+        margin-top: 0;
+        flex-direction: column-reverse;
+        margin-bottom: 25px ;
+    }
+    .content .short-presentation img {
+        z-index: 0;
+        margin: 25px auto;
+
+    }
+    .vl {
+        display: none;
+    }
+    .content .short-presentation .text-left {
+        max-width: 100%;
+        z-index: 0;
+    }
+    .map-container iframe {
+        margin-top: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 90%;
+        border: none;
+        border-radius: 8%;
+    }
+    .map-container {
+        position: relative;
+        overflow: hidden;
+        width: 95%;
+        padding-top: 90%;
+        max-width: 800px;
+        margin: 12px auto;
+    }
+    .content .elhelyezkedes p{
+        margin: 0 12px;
+        line-height: 1.6rem;
+        font-size: 17px;
+    }
+    .weather-icon-container {
+        width: 130px;
+        height: 130px;
+    }
+    .video-name {
+        margin: 20px 0;
+    }
+    .content .text-right {
+        margin-top: 50px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 458px) {
+    body {
+        background-image: url('/public/storage/fooldal/borus-kep-varosfalva-phone.jpg');;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html {
+    height: 100%;
+}
+body {
+
+    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgb(6, 53, 38));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+h1.egyhaz {
+    text-align: center;
+    color: rgb(252, 251, 215);
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    text-shadow: #374837 3px 3px 15px;
+}
+div.cim {
+    display: flex;
+    flex-direction: column;
+
+}
+
+div.cim img {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 25px;
+}
+body {
+    margin: 0;
+}

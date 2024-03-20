@@ -1,0 +1,270 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(119, 119, 119, 0.21);
+    color: #333;
+}
+
+p {
+    font-family: 'Arima Madurai', cursive;
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    height: 300vh;
+
+
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(152, 152, 152, 0.3);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1.cim {
+    color: #333;
+}
+
+/* Your existing styles */
+
+.form-group,
+label,
+select,
+input[type="text"],
+input[type="file"],
+button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+h1.cim {
+    text-align: center;
+    color: #333;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.back-to-page {
+    background-color: #41a2de;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.back-to-page a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pictures,
+.comments {
+    width: 85%;
+    background-color: #cccccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select,
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+
+button.delete-button,
+button.bann-button {
+    background-color: #de5941;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+button.upload-button,
+button.unlock-button,
+button.accept-button {
+    background-color: #41de5b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.upload-button:hover,
+button.bann-button:hover,
+button.unlock-button:hover,
+button.delete-button:hover,
+button.accept-button:hover {
+    background-color: #357ea8;
+}
+
+.loading-icon {
+    display: none;
+    margin-left: 10px;
+}
+
+
+.comment {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user p.username {
+    font-weight: bold;
+    font-size: 25px;
+    margin: auto 0;
+    font-family: 'Robot', sans-serif;
+}
+
+.banned {
+    color: #985858;
+    font-weight: bold;
+    margin: 0;
+}
+
+.comment-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-h4 {
+    margin: 0;
+}
+
+.news {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news_item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.news_item h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news_item p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.news_item .author {
+    font-style: italic;
+    color: #888;
+}
+
+.news_item .timestamp {
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+
+@media (max-width: 1200px) {
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: 300px;
+    }
+    .sidebar .menu {
+        margin: 0 auto;
+        width: 30%;
+    }
+    .sidebar .menu a {
+        text-align: center;
+    }
+    .content {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+}

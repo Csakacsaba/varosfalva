@@ -1,0 +1,176 @@
+
+body {
+    height: 100%;
+    min-width: 290px;
+    max-width: 1980px;
+    margin: auto;
+    background-size: cover;
+    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgb(6, 53, 38));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: -5px auto;
+    border: 2px solid #207a15;
+    border-radius: 25px;
+}
+.container div {
+    /*width: 80%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 8px 15px;
+}
+.container input{
+    max-width: 100%;
+}
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input {
+    border-color: green;
+}
+.textarea {
+    border: 2px solid blue;
+}
+label{
+    color: #025039;
+    font-size: 18px;
+    text-align: center;
+}
+div.checkbox {
+    justify-content: center; ;
+}
+div.checkbox label {
+    margin: 5px;
+}
+h2 {
+    text-align: center;
+    padding: 15px;
+    margin: 15px 0;
+    color: rgb(252, 251, 215);
+    text-shadow: 18px 10px 35px rgb(6, 38, 38);
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+
+}
+/*********************************/
+/*BUTTON*/
+
+.button-33 {
+    margin: 20px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-33:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.content.contact .comments {
+    width: 100%;
+    height: 100%;
+}
+
+.content.contact {
+    display: flex;
+    flex-direction: column;
+
+}
+.container {
+    box-shadow: #2d2c2c 3px 3px 25px;
+    max-width: 300px;
+}
+.container .form-group  label {
+    text-align: center;
+    text-shadow: 18px 10px 35px rgb(6, 38, 38);
+    color: rgb(252, 251, 215);
+    margin: 5px;
+
+}
+.errors p {
+    font-size: 13px;
+    font-weight: 700 ;
+    text-align: center;
+    color: #a20606;
+    margin: 0;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+div.success div {
+   position: fixed;
+}
+.buttons a {
+    margin: 10px;
+    text-decoration: none;
+    background-color: #a20606;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 12px;
+    text-align: center;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.buttons a:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+.login-red-a-tag {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+.login-red-a-tag:hover {
+    text-decoration: underline;
+}
+p.password_request_p {
+    color: antiquewhite;
+    font-size: 17px;
+}
+
+.bottom-buttons {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+
+}
+.bottom-buttons a {
+    font-weight: bold;
+    font-size: 13px;
+}
+.google-button a {
+    margin: 0 auto;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html {
+    height: 100%;
+}
+body {
+    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgb(6, 53, 38));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*********************************************************/
+/*IMAGES*/
+.images {
+    margin: 20px 42px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+.images img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgb(79, 100, 97);
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 7px 7px 15px rgba(95, 116, 95, 0.32);
+    transition: all 0.3s ease-out;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+/*********************************************************/
+
+
+#by {
+    font-family: 'Arima Madurai', cursive;
+    color: #4A676A;
+    font-size: 10px;
+    position: absolute;
+    top: 22%;
+    right: 2.5%;
+}
+.img-delete-button {
+    margin-left: -45px;
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 22px;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
+/*******************************************************************************/
+@media (max-width: 1010px) {
+
+    .images img {
+        width: 150px;
+        height: 150px;
+        transition: all 0.3s ease-out;
+    }
+
+}
+
+@media (max-width: 865px) {
+    .images{
+        gap: 15px;
+    }
+    .images img {
+        width: 120px;
+        height: 120px;
+        transition: all 0.3s ease-out;
+    }
+    .content ul li {
+        transition: .2s ;
+    }
+    .content ul li:hover{
+        color: rgb(142, 178, 161);
+        text-decoration: none;
+        transform: scale(1.2);
+    }
+}
