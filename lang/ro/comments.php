@@ -10,7 +10,7 @@ return [
     '' => '',
     'greeting' => 'Bine ai venit în secțiunea de comentarii!',
     'admin_comment_name' => 'Csaba Csáka (creatorul site-ului)',
-    'admin_comment' => 'Bun venit în secțiunea de comentarii a site-ului Városfalva! Te salut că ai ajuns aici și ai vizitat pagina. Sper că vei găsi conținuturi interesante și utile. Navighează fără să eziti și, dacă ai întrebări sau ai nevoie de ajutor, nu ezita să le pui. Mulțumesc că ești aici și îți doresc o experiență plăcută pe site! Spune și tu părerea ta!! 😁',
+    'admin_comment' => 'Atragem atenția respectaților noștri vizitatori că doar utilizatorii înregistrați pot scrie un mesaj în Cartea de oaspeți. La scriere, vă rugăm să aveți grijă să nu încălcați onoarea altora. Mesajele scrise în Cartea de oaspeți vor fi publicate doar după aprobare. 😁',
     'comments_title' => 'Comentarii:',
     'search' => 'Căutare în comentarii (text, nume)',
     'login_to_comment'=>'Pentru a comenta, te rugăm să te autentifici!',

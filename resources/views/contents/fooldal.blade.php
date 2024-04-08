@@ -8,6 +8,8 @@
 @endsection
 
 @section('content')
+    <div class="background-picture"><img class="presentation-img" src="{{asset('storage/fooldal/borus-kep-varosfalva2.jpg')}}" alt="Kep"></div>
+    <div class="background-picture-mobile"><img class="presentation-img" src="{{asset('storage/fooldal/templom.jpg')}}" alt="Kep"></div>
     <div class="content">
 
         <div  class="short-presentation">
@@ -87,11 +89,8 @@
                 <p>{{__('fooldal.climate_description_4')}}</p>
             </div>
         </div>
-
+        @include('layouts.footer')
     </div>
-
-    @include('layouts.footer')
-
     <script>
         const video = document.getElementById('myVideo');
 

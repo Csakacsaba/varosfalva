@@ -2,6 +2,7 @@
 
 header {
     background-color: rgba(46, 56, 77, 0.8);
+    z-index: 1001;
 }
 .lang {
     display: flex;
@@ -17,8 +18,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 1001; /* Információs sáv előtérben */
 }
-
 .weather-info {
     flex: 1;
 }
@@ -126,8 +127,8 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*padding: 0 24px;*/
-    z-index: 5000;
+    /* További stílusok... */
+    z-index: 1000; /* Navigáció előtérben */
 }
 .nav-menu {
     display: flex;

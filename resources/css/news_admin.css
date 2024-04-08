@@ -42,9 +42,14 @@ p {
 }
 
 .news_upload form {
+    margin: 0 auto;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.image-uploader {
+    border: 1px solid black;
 }
 
 .news_upload input[type="text"],

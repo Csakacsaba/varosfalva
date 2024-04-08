@@ -43,15 +43,19 @@
         <h1 class="cim">HÍREK KEZELÉSE</h1>
         <div>
             <div class="news_upload">
-
-                <form action="{{ route('new.store') }}" method="GET">
+                <form action="{{ route('new.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="text" name="title" placeholder="Cím: ">
                     <input type="text" name="content" placeholder="Szöveg: ">
-                    <select name="author" id="">
-                        <option>{{auth()->user()->name}}</option>
-                    </select>
-                    <input type="submit" >
+                    <input type="text" name="author" value="{{auth()->user()->name}}">
+                    <div class="image-uploader">
+                        <div id="image-preview"></div>
+                        <input style="border: 0" type="file" name="image" multiple class="form-control" id="image-input" required>
+                    </div>
+                        <div style="display: flex; justify-content: center">
+                        <button style="width: 180px" type="submit" class="upload-button" onclick="showLoadingIcon()">Upload Image</button>
+                        <img style="width: 50px" class="loading-icon" src="{{asset('storage/icons/loading.gif')}}">
+                    </div>
                 </form>
 
             </div>
@@ -60,6 +64,7 @@
                     <div class="news_item">
                         <h2>{{$new->title}}</h2>
                         <p>{{$new->content}}</p>
+                        <img class="news-img" src="{{asset('storage/'.$new->image)}}" alt="Kép">
                         <p>Szerző: {{$new->author}}</p>
                         <p>{{$new->created_at}}</p>
                         <form action="{{ route('new.delete', $new->id) }}" method="DELETE">
@@ -72,6 +77,12 @@
     </div>
 </div>
 </body>
+<script>
+    function showLoadingIcon() {
+        var loadingIcon = document.querySelector('.loading-icon');
+        loadingIcon.style.display = 'inline-block';
+    }
+</script>
 </html>
 
 

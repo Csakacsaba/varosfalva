@@ -14,7 +14,7 @@ h1.greeting {
 body{
     margin: 0;
     background-size: cover;
-    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgb(6, 53, 38));
+    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgba(46, 56, 77, 0.8));
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -25,7 +25,7 @@ div.col-md-8 {
     padding: 35px;
     margin: 20px 40px;
     border-radius: 15px;
-    box-shadow: 3px 3px 18px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
 }
 div span.time {
     color: #7e7e7e;
@@ -63,6 +63,11 @@ ul.review li button {
 
 /*COMMENT SECTION*/
 
+.content-comments {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 div.comment-section {
     display: flex;
     flex-direction: column;
@@ -87,7 +92,7 @@ div.container textarea{
     height: 110px;
     min-width: 100%;
     border-radius: 17px;
-    box-shadow: 3px 3px 18px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
     padding: 20px;
 }
 div.container {
@@ -110,7 +115,7 @@ div.container form {
     text-decoration: none;
     background-color: #c2fbd7;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
     color: green;
     cursor: pointer;
     display: block;
@@ -125,14 +130,14 @@ div.container form {
     touch-action: manipulation;
 }
 .buttons a:hover {
-    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
     transform: scale(1.05) rotate(-1deg);
 }
 
 .buttons a.register{
     background-color: #910b60;
     color: white;
-    box-shadow: rgba(92, 96, 98, 0.2) 0 -25px 18px -14px inset, rgb(30, 169, 126) 0 1px 2px, rgba(56, 72, 61, 0.15) 0 2px 4px, rgba(252, 238, 238, 0.15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
 }
 .intittle {
     top: 50px;
@@ -156,7 +161,7 @@ div.comment-icons {
     padding: 12px;
     border-radius: 15px;
     background-color: #1dc489;
-    box-shadow: 4px 4px 7px rgba(0, 0, 0,.5);
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
     transition: 0.7s all;
 }
 .search.button:hover{
@@ -169,25 +174,25 @@ input.comment {
     width: 290px;
     border: 3px solid black;
     border-radius: 8px;
-    box-shadow: 4px 4px 7px rgba(0, 0, 0,.5);
+    box-shadow: 1px 1px 18px;
 
 }
 .dislike-btn {
     background-color: indianred;
     border-radius: 8px;
-    box-shadow: 3px 3px 7px rgba(0,0,0,.4)
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2)
 }
 .like-btn {
     background-color: lightgreen;
     border-radius: 8px;
-    box-shadow: 3px 3px 7px rgba(0,0,0,.4)
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2)
 }
 .non-accepted-message {
     background-color: #eca593;
     padding: 35px;
     margin: 20px 40px;
     border-radius: 15px;
-    box-shadow: 3px 3px 18px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2)
 }
 .text-error {
     color: #9a0707;
@@ -218,7 +223,7 @@ input.comment {
     margin: 20px;
     background-color: #c2fbd7;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
     color: green;
     cursor: pointer;
     display: inline-block;
@@ -237,7 +242,7 @@ input.comment {
     margin: 20px;
     background-color: indianred;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -291,7 +296,7 @@ input.comment {
         padding: 35px;
         margin: 10px 12px;
         border-radius: 15px;
-        box-shadow: 3px 3px 18px;
+        box-shadow: 2px 2px 7px rgba(0,0,0,.2);
 }
     .comment-tittle-yellow {
         color: navajowhite; margin: 20px 20px

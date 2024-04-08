@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function(){
     Route::post('user/edit/name', [\App\Http\Controllers\UserController::class, 'change_name'])->name('user.edit.name');
     Route::post('user/edit/password', [\App\Http\Controllers\UserController::class, 'change_password'])->name('user.edit.password');
     Route::get('user/edit/delete', [\App\Http\Controllers\UserController::class, 'delete_user'])->name('user.edit.delete');
+    Route::post('/admin/store_news', [\App\Http\Controllers\NewsController::class, 'news_store'])->name('new.store');
 
     Route::middleware('can:admin')->group(function(){
         Route::post('/image/store', [\App\Http\Controllers\ImageController::class, 'upload'])->name('image.store');
@@ -51,12 +52,7 @@ Route::middleware('auth')->group(function(){
         Route::post('/admin/bann/{user}', [\App\Http\Controllers\AdminController::class, 'bann_user'])->name('bann_user_admin');
         Route::post('/admin/unlock/{user}', [\App\Http\Controllers\AdminController::class, 'unlock_user'])->name('unlock_user_admin');
         Route::get('/admin/news', [\App\Http\Controllers\NewsController::class, 'news_admin'])->name('news.admin');
-        Route::get('/admin/store_news', [\App\Http\Controllers\NewsController::class, 'news_store'])->name('new.store');
         Route::get('/admin/delete_news/{new}', [\App\Http\Controllers\NewsController::class, 'news_delete'])->name('new.delete');
     });
 });
 
-//Route::middleware(['auth:sanctum', config('jetstream.auth_session'),
-//    'verified'])
-//    ->group(function () {Route::get('/dashboard', function () {
-//    return view('dashboard');})->name('dashboard');});

@@ -2,7 +2,6 @@
 
 @section('styles')
     @vite('resources/css/kepek.css')
-{{--    @vite('resources/css/app.css')--}}
 @endsection
 
 @section('content')
@@ -11,12 +10,11 @@
             @include('gallery.navgallery')
         </div>
         <div class="images">
-{{--            @dd($images)--}}
+
             @foreach($images as $index => $i)
                 <img id="myImage{{$index}}" src="{{($i->getFullUrl())}}" alt=""
                      onclick="zoomImage(this, '{{$i->getFullUrl()}}')"
                      data-description='{{$i->custom_properties['description']}}'>
-{{--            @dd($i->getFullUrl())--}}
                 @can('admin')
                     <form class="img-delete-button" method="POST" action='{{route('delete_img_admin',['media'=>$i->id])}}'>
                         @csrf
@@ -32,10 +30,6 @@
     </div>
 @endsection
 
-
-
-
-{{--Eza js azért van itt mert a @vite-al nem ment--}}
 <script>
     function zoomImage(img, imgSrc) {
         var zoomDiv = document.createElement("div");
