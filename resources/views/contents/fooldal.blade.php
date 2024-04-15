@@ -11,7 +11,6 @@
     <div class="background-picture"><img class="presentation-img" src="{{asset('storage/fooldal/borus-kep-varosfalva2.jpg')}}" alt="Kep"></div>
     <div class="background-picture-mobile"><img class="presentation-img" src="{{asset('storage/fooldal/templom.jpg')}}" alt="Kep"></div>
     <div class="content">
-
         <div  class="short-presentation">
             <div class="text-left">
                 <div>

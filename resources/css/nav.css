@@ -115,7 +115,7 @@ nav.navbar h1{
     margin: auto 10px;
     color: rgb(225, 225, 225);
     font-size: 2.2rem;
-    font-family: 'Nunito', sans-serif;
+    font-family: cursive;
     z-index: 9999;
 }
 ul {
@@ -136,26 +136,24 @@ ul {
     align-items: center;
     gap: 20px;
     z-index: 10;
-
 }
+
 
 .nav-link {
     transition: 0.7s ease;
-
+    font-family: cursive;
 }
 nav ul li{
     height: 100%;
     list-style-type: none;
     padding: 0px 15px ;
     cursor: pointer;
-    /*border-radius: 15px;*/
     transition: transform 0.5s ease-in-out, background-color 0.1s ease-out;
     z-index: 10;
 }
+
 nav ul li.nav-item:hover {
-    /*background-color: rgb(52, 147, 250);*/
     transform: translate(4%, -6%) scale(1.05);
-    /*box-shadow: 3px 3px 3px rgba(255,255,255, 0.2);*/
 }
 .hamburger {
     display: none;

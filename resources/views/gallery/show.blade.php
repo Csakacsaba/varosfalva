@@ -9,6 +9,7 @@
         <div>
             @include('gallery.navgallery')
         </div>
+        <h1 class="tittle_h">Képek</h1>
         <div class="images">
 
             @foreach($images as $index => $i)

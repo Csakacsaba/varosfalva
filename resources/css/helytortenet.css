@@ -6,11 +6,10 @@
     box-sizing: border-box;
 }
 body {
-    min-width: 290px;
     margin: auto;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgba(46, 56, 77, 0.8));
+    background-image: linear-gradient(to bottom right, rgb(236, 236, 236), rgba(173, 173, 173, 0.8));
     /*display: flex;*/
     flex-direction: row;
 }
@@ -25,7 +24,8 @@ p {
 .tittle_h {
     text-align: center;
     margin: 30px 0;
-    color: rgb(252, 251, 215);
+    color: rgb(0, 0, 0);
+    font-family: cursive;
 }
 
 .content-helytortenet {
@@ -37,13 +37,14 @@ p {
 }
 
 .neve, .regeszet, .kozepkor, .templom, .iskola, .hiresemberek {
-    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgba(162, 162, 162, 0.43));
-    border-radius: 8px;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(220, 220, 220));
+    border-radius: 15px;
     margin: 0 auto 20px auto;
-    padding: 15px;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    width: 60%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
+    /*border: 1px solid black;*/
 }
 
 .neve h2, .regeszet h2, .kozepkor h2, .templom h2, .iskola h2, .hiresemberek h2 {
@@ -73,4 +74,13 @@ p {
 
 .fade-in.visible {
     opacity: 1;
+}
+
+
+@media (max-width: 530px) {
+    .neve, .regeszet, .kozepkor, .templom, .iskola, .hiresemberek {
+
+        width: 100%;
+
+    }
 }

@@ -11,6 +11,23 @@
 
 @section('content')
     <div class="content-comments">
+
+
+
+        @guest()
+            <div class="buttons">
+                <a class="register" href="{{route('register')}}">{{__('comments.register')}}</a>
+                <a href="{{route('login')}}">{{__('comments.login')}}</a>
+            </div>
+            <h1 class="intittle" style="text-align: center; color: black">{{__('comments.greeting')}}</h1>
+            <div class="admin-comment">
+                <div class="content">
+                    <h4 style="text-shadow: #bdbdbd 1px 1px 5px; font-size: 20px;">{{__('comments.admin_comment_name')}}</h4>
+                    <p >{{__('comments.admin_comment')}}</p>
+                </div>
+            </div>
+        @endguest
+
         @auth()
             <div class="comment-section">
                 <div class="from-user">
@@ -25,18 +42,24 @@
                     @endcan
                 </div>
                 <h1 class="greeting">{{__('comments.greeting')}}</h1>
-                @if(!auth()->user()->banned)
-                <div class="container">
-                    <form action="{{route('comment.save')}}" method="POST">
-                        @csrf
-                        <textarea name="text" rows="10" placeholder="{{__('comments.add_comment_placeholder')}}"></textarea>
-                        <button class="add-comment-button" type="submit" onclick="showLoadingIcon()">{{__('comments.add_comment')}}</button>
-                        <img class="loading-icon" src="{{asset('storage/icons/loading.gif')}}">
-                        @error('text')
-                            <p class="text-error"> <span>&#33;</span> {{$message}} <span>&#33;</span></p>
-                        @enderror
-                    </form>
+                <div class="admin-comment">
+                    <div class="content">
+                        <h4 style="text-shadow: #bdbdbd 1px 1px 5px; font-size: 20px;">{{__('comments.admin_comment_name')}}</h4>
+                        <p >{{__('comments.admin_comment')}}</p>
+                    </div>
                 </div>
+                @if(!auth()->user()->banned)
+                    <div class="container">
+                        <form action="{{route('comment.save')}}" method="POST">
+                            @csrf
+                            <textarea name="text" rows="10" placeholder="{{__('comments.add_comment_placeholder')}}"></textarea>
+                            <button class="add-comment-button" type="submit" onclick="showLoadingIcon()">{{__('comments.add_comment')}}</button>
+                            <img class="loading-icon" src="{{asset('storage/icons/loading.gif')}}">
+                            @error('text')
+                            <p class="text-error"> <span>&#33;</span> {{$message}} <span>&#33;</span></p>
+                            @enderror
+                        </form>
+                    </div>
                 @else
                     <p class="banned-text">{{__('comments.bann')}}</p>
                 @endif
@@ -44,34 +67,14 @@
         @endauth
 
 
-        @guest()
-            <div class="buttons">
-                <a class="register" href="{{route('register')}}">{{__('comments.register')}}</a>
-                <a href="{{route('login')}}">{{__('comments.login')}}</a>
-            </div>
-            <h1 class="intittle" style="text-align: center; color: whitesmoke">{{__('comments.greeting')}}</h1>
-        @endguest
 
+        <h2 style="color: black; font-family: cursive" class="comment-tittle">{{__('comments.comments_title')}} </h2>
 
-        <div class="col-md-8">
-            <div class="media g-mb-30 media-comment">
-
-                <div class="content">
-                    <div>
-                        <h4 style="text-shadow: #bdbdbd 1px 1px 5px; font-size: 20px;">{{__('comments.admin_comment_name')}}</h4>
-                    </div>
-                    <p >{{__('comments.admin_comment')}}</p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="comment-tittle-yellow">{{__('comments.comments_title')}} </h2>
-
-        <form method="POST" action="{{route('search_contact')}}">
-            @csrf
-            <input class="comment" style="" type="text" name="search" placeholder="{{__('comments.search')}}">
-            <button class="search button"><i class="fa fa-search" ></i></button>
-        </form>
+{{--        <form method="POST" action="{{route('search_contact')}}">--}}
+{{--            @csrf--}}
+{{--            <input class="comment" style="" type="text" name="search" placeholder="{{__('comments.search')}}">--}}
+{{--            <button class="search button"><i class="fa fa-search" ></i></button>--}}
+{{--        </form>--}}
 
         @foreach($comments as $comment)
             @auth()
@@ -86,10 +89,10 @@
                     <div class="media g-mb-30 media-comment">
                         <div class="content">
                             <div>
-                                <h4 style="text-shadow: #bdbdbd 1px 1px 5px; font-size: 20px;">{{$comment->user->name}}</h4>
+                                <h4 style="text-shadow: #bdbdbd 1px 1px 5px; font-size: 20px; margin: 0 0 10px 0">{{$comment->user->name}}</h4>
                                 <span class="time">{{\Carbon\Carbon::parse($comment->created_at)->diffForHumans()}}</span>
                             </div>
-                            <p>{{$comment->text}}</p>
+                            <p class="user-comment">{{$comment->text}}</p>
                             <div class="comment-icons">
                                 <ul class="review">
                                     <li>

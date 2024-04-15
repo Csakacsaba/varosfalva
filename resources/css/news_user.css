@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgb(6, 53, 38));
+    background-image: linear-gradient(to bottom right, rgb(236, 236, 236), rgba(173, 173, 173, 0.8));
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -67,10 +67,11 @@ body {
 
 .news_title {
     text-align: center;
-    color: rgb(252, 251, 215);
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 30px 0;
+    color: rgb(0, 0, 0);
+    font-family: cursive;
 }
+
 
 .news_heading {
     background-color: rgba(76, 89, 77, 0.8); /* Facebook kék */

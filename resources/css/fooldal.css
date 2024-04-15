@@ -300,12 +300,18 @@ body {
 
 }
 
-@media (max-width: 680px) {
+@media (max-width: 530px) {
     .background-picture-mobile {
         display: inline;
     }
     .background-picture {
         display: none;
+    }
+}
+
+@media (min-width: 2020px) {
+    .presentation-img {
+        width: 100%;
     }
 }
 

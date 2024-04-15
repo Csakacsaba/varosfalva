@@ -33,7 +33,7 @@
 <nav class="navbar">
 
     <div class="valami">
-        <a href="{{route("home")}}"><h1> {{__('nav.name')}}</h1></a>
+        <a class="main-title" href="{{route("home")}}"><h1> {{__('nav.name')}}</h1></a>
         @auth()
                 @csrf
                 <a style="padding: 10px; margin-top: 10px" href="{{route('user.edit')}}" type="submit"><i style="margin-right: 8px" class='fas fa-user-circle' ></i>{{auth()->user()->name}}</a>

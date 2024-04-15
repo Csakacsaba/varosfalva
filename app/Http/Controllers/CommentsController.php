@@ -46,20 +46,17 @@ class CommentsController extends Controller
 
     public function like(Request $request)      //ez kommunial a js-el
     {
-
         if ($request->ajax()) {
             $commentId = $request->input('comment_id');
             $userId = $request->input('user_id');
             $like = Like::where('comment_id', $commentId)
                 ->where('user_id', $userId)
                 ->first();
-
             if ($like) {
                 $like->likeNr = 1;
 
                 $like->save();
             } else {
-
                 Like::create([
                     'comment_id' => $commentId,
                     'user_id' => $userId,
@@ -70,7 +67,7 @@ class CommentsController extends Controller
                 'like' => Like::where('likeNr', 1)->where('comment_id', $commentId)->count(),
                 'dislike' => Like::where('likeNr', 0)->where('comment_id', $commentId)->count()
                 ]);
-
+            
         }
     }
 
@@ -84,9 +81,7 @@ class CommentsController extends Controller
                 ->where('user_id', $userId)
                 ->first();
             if ($like) {
-
                 $like->likeNr = 0;
-
                 $like->save();
             } else {
                 Like::create([

@@ -10,7 +10,7 @@ html {
     height: 100%;
 }
 body {
-    background-image: linear-gradient(to bottom right, rgb(204, 202, 202), rgb(6, 53, 38));
+    background-image: linear-gradient(to bottom right, rgb(236, 236, 236), rgba(173, 173, 173, 0.8));
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -37,6 +37,12 @@ body {
     border-radius: 16px;
     box-shadow: 7px 7px 15px rgba(95, 116, 95, 0.32);
     transition: all 0.3s ease-out;
+}
+.tittle_h {
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: cursive;
 }
 
 .images img:hover {
