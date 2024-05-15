@@ -179,14 +179,12 @@
 </script>
 @auth()
     <script>
-
         $(document).ready(function () {
             $('.like-btn').on('click', function () {
                 var button = $(this);
                 var commentId = $(this).attr('id').split('-')[1];
                 var userId = {{auth()->user()->id}};
                 var csrfToken = '{{ csrf_token() }}';
-
                 $.ajax({
                     url: '{{route('comment.like')}}',
                     method: 'POST',
@@ -203,11 +201,9 @@
                         button.find('.refresh').html(response.like);
 
                         $('#dislike-' + commentId).find('.refresh').html(response.dislike);
-
-
                     },
                     error: function (xhr, status, error) {
-                        // Hiba esetén itt kezelni le a hibát
+                        // Hiba esetén itt vissza adja a hibát a conzolban
                         console.log(error);
                     }
                 })

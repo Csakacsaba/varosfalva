@@ -30,12 +30,10 @@ class NewsController extends Controller
             'image' => 'required'
         ]);
 
-//        dd($validatedData);
-
         $imagePath = $request->file('image')->store('news', 'public');
 
         $news = new News();
-        $news->title = $validatedData['title'];
+        $news->title = $validatedData['title' ];
         $news->content = $validatedData['content'];
         $news->author = $validatedData['author'];
         $news->image = $imagePath;

@@ -19,7 +19,7 @@ Route::get('/egyhaz', function () {return view('contents.egyhaz');})->name('egyh
 Route::get('/galleria/{type}', [\App\Http\Controllers\ImageController::class, 'show'])->name('kepek');
 Route::get('/contact', [\App\Http\Controllers\CommentsController::class, 'index'])->name('contact');
 Route::post('/contact', [\App\Http\Controllers\CommentsController::class, 'search'])->name('search_contact');
-Route::get('/news', [\App\Http\Controllers\NewsController::class, 'create'])->name('news');
+Route::get('/our_news', [\App\Http\Controllers\NewsController::class, 'create'])->name('news');
 
 Route::get('authorized/google', [LoginWithGoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('authorized/google/callback', [LoginWithGoogleController::class, 'handleGoogleCallback'])->name('google.callback');

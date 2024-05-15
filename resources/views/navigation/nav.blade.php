@@ -44,7 +44,7 @@
         <li class="nav-item"><a href="{{route('home')}}" class="nav-link"><i class='fas fa-house-user'></i> {{__('nav.home')}}</a></li>
         <li class="nav-item"><a href="{{route('helytortenet')}}" class="nav-link"><i class="fa-sharp fa-solid fa-book"></i>{{__('nav.story')}}</a></li>
         <li class="nav-item"><a href="{{route('kepek', ['szuretibalok'])}}" class="nav-link"><i class="fa-regular fa-images"></i>{{__('nav.gallery')}}</a></li>
-        <li class="nav-item"><a href="{{route('egyhaz')}}" class="nav-link"><i class="fa-sharp fa-solid fa-place-of-worship"></i>{{__('nav.church')}}</a></li>
+{{--        <li class="nav-item"><a href="{{route('egyhaz')}}" class="nav-link"><i class="fa-sharp fa-solid fa-place-of-worship"></i>{{__('nav.church')}}</a></li>--}}
         <li class="nav-item"><a href="{{route('news')}}" class="nav-link"><i class="fas fa-newspaper"></i> {{__('nav.news')}}</a></li>
         <li class="nav-item"><a href="{{route('contact')}}" class="nav-link"><i class="fa-regular fa-handshake"></i>{{__('nav.contact')}}</a></li>
     </ul>
