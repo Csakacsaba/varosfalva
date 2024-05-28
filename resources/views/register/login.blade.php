@@ -22,8 +22,6 @@
     <h2 class="text-3xl">{{__('login.title')}}</h2>
 
     <form method="POST" action="{{route('inlogin')}}">
-
-
         <div class="container max-w-xs">
             <div class="errors">
                 @csrf
@@ -31,16 +29,15 @@
                     <label>Email:</label>
                     <input type="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-2 text-sm font-medium text-gray-900 dark:text-white" name="email" id="email">
                 </div>
-                @error('email')
-                <p>{{$message}}</p>
-                @enderror
-
                 <div class="form-group">
                     <label>Password:</label>
                     <input type="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="password" id="phone">
                 </div>
+                @error('email')
+                <p>{{__('flash.login_error_email')}}</p>
+                @enderror
                 @error('password')
-                <p>{{$message}}</p>
+                <p>{{__('flash.login_error_password')}}</p>
                 @enderror
 
                 <button type="submit" class="button-33 bg-emerald-300" role="button">{{__('login.button')}}</button>

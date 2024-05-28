@@ -15,33 +15,12 @@
             <div class="text-left">
                 <div>
                     <h1 style="margin: 230px 0">{{__('fooldal.greeting')}}</h1>
-{{--                    <p>{{__('fooldal.short_presentation_1')}}</p>--}}
-{{--                    <p>{{__('fooldal.short_presentation_2')}}</p>--}}
-{{--                    <p>{{__('fooldal.short_presentation_3')}}</p>--}}
+
                 </div>
                 <div class="bottom-short-presentation">
-{{--                    <div>--}}
-{{--                        <p class="bottom-short-presentation-p">Lorem ipsum dolor sit amasi. Animi corporis cum expedita impedit itaque iusto maxime mollitia nam nobis nulla placeat unde voluptates?  impedit itaque iusto maxime mollitia nam nobis nulla placeat unde voluptates?</p>--}}
-{{--                        <p class="bottom-short-presentation-p">mi corporis cum, cupiditate doloremque dolorum eaque expedita impedit itaque iusto maxime mollitia nam nobis nulla placeat unde voluptates?  impedit itaque iusto maxime mollitia nam nobis nulla placeat unde voluptates?</p>--}}
-{{--                    </div>--}}
-{{--                    <div style="margin: 0 auto" class="card">--}}
-{{--                        <div class="weather-info">--}}
-{{--                            <div class="city"></div>--}}
-{{--                            <div class="temp"></div>--}}
-{{--                            <div style="margin: 8px 0" class="humidity"></div>--}}
-{{--                            <div style="margin: 8px 0" class="wind">--}}
-{{--                                <img class="wind-img" src="" alt="WIND">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="weather-icon-container">--}}
-{{--                            <img class="weather-icon" src="{{asset('storage/fooldal/cloudy.png')}}" alt="Weather Icon">--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+
                 </div>
             </div>
-{{--            <div class="picture-left">--}}
-{{--                <img class="presentation-img" src="{{asset('storage/fooldal/borus-kep-varosfalva.jpg')}}" alt="Kep">--}}
-{{--            </div>--}}
         </div>
 
         <div class="background">

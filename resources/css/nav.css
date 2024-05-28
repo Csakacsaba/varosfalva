@@ -18,7 +18,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 1001; /* Információs sáv előtérben */
+    z-index: 1001;
 }
 .weather-info {
     flex: 1;
@@ -115,7 +115,6 @@ nav.navbar h1{
     margin: auto 10px;
     color: rgb(225, 225, 225);
     font-size: 2.2rem;
-    font-family: cursive;
     z-index: 9999;
 }
 ul {
@@ -141,12 +140,11 @@ ul {
 
 .nav-link {
     transition: 0.7s ease;
-    font-family: cursive;
 }
 nav ul li{
     height: 100%;
     list-style-type: none;
-    padding: 0px 15px ;
+    padding: 0 15px ;
     cursor: pointer;
     transition: transform 0.5s ease-in-out, background-color 0.1s ease-out;
     z-index: 10;
@@ -209,6 +207,7 @@ p.logi {
     }
     .nav-item{
         margin: 16px 0;
+        font-family: sans-serif;
     }
     .nav-menu.active{
         left: 0;
@@ -302,6 +301,7 @@ p.logi {
     }
     @media (max-height: 599px){
         .nav-menu li {
+            font-family: sans-serif;
             box-shadow: none;
             width: 100%;
             margin: 0;

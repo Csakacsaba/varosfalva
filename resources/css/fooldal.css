@@ -97,12 +97,11 @@ body {
     transform: translate(0%, 0%) scale(1.08);
 }
 .content .short-presentation h1  {
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     padding: 15px;
     margin-bottom: 30px;
     color: rgb(252, 251, 215);
-    text-shadow: 7px 7px 17px rgba(0, 0, 0,.9);
     font-family: 'Roboto', sans-serif;
 }
 .content .text-right {
@@ -177,7 +176,6 @@ body {
     padding: 15px;
     margin: 15px 0;
     color: rgb(252, 251, 215);
-    text-shadow: 18px 10px 35px rgb(6, 38, 38);
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
 }
@@ -190,7 +188,7 @@ body {
     padding: 40px 15px 15px 15px;
     margin-bottom: 30px;
     color: rgb(252, 251, 215);
-    text-shadow: 18px 10px 35px rgb(6, 38, 38);
+
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
 }

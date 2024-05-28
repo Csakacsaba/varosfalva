@@ -11,9 +11,6 @@
 
 @section('content')
     <div class="content-comments">
-
-
-
         @guest()
             <div class="buttons">
                 <a class="register" href="{{route('register')}}">{{__('comments.register')}}</a>
@@ -56,7 +53,7 @@
                             <button class="add-comment-button" type="submit" onclick="showLoadingIcon()">{{__('comments.add_comment')}}</button>
                             <img class="loading-icon" src="{{asset('storage/icons/loading.gif')}}">
                             @error('text')
-                            <p class="text-error"> <span>&#33;</span> {{$message}} <span>&#33;</span></p>
+                            <p class="text-error">{{__('flash.comment_min_string')}}</p>
                             @enderror
                         </form>
                     </div>

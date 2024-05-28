@@ -64,7 +64,7 @@
                     <div class="news_item">
                         <h2>{{$new->title}}</h2>
                         <p>{{$new->content}}</p>
-                        <img class="news-img" src="{{asset('storage/'.$new->image)}}" alt="Kép">
+                        <img style="max-width: 100%" class="news-img" src="{{asset($new->image)}}" alt="Kép">
                         <p>Szerző: {{$new->author}}</p>
                         <p>{{$new->created_at}}</p>
                         <form action="{{ route('new.delete', $new->id) }}" method="DELETE">

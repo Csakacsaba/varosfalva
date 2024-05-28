@@ -7,12 +7,13 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
-
 Route::post('/setlang/{locale}',[\App\Http\Controllers\LanguageController::class, 'change_language'])->name('cahange_l');
 Route::post('/password_request', [\App\Http\Controllers\PasswordResetController::class, 'password_reset_email'])->name('password.request');
 Route::get('/password_request', [\App\Http\Controllers\PasswordResetController::class, 'password_request_blade'])->name('password.req');
-Route::post('/password_reset_confirmation', [\App\Http\Controllers\PasswordResetController::class, 'password_reset_confirmation'])->name('password.reset.confirmation');
-Route::get('/reset-password/{token}', function (string $token) {return view('password_reset.reset-password', ['token' => $token]);})->name('password.reset');
+Route::post('/password_reset_confirmation', [\App\Http\Controllers\PasswordResetController::class, 'password_reset_confirmation'])
+    ->name('password.reset.confirmation');
+Route::get('/reset-password/{token}', function (string $token) {return view('password_reset.reset-password', ['token' => $token]);})
+    ->name('password.reset');
 Route::get('/', function () {return view('contents.fooldal');})->name('home');
 Route::get('/helytortenet', function () {return view('contents.helytortenet');})->name('helytortenet');
 Route::get('/egyhaz', function () {return view('contents.egyhaz');})->name('egyhaz');
@@ -20,14 +21,13 @@ Route::get('/galleria/{type}', [\App\Http\Controllers\ImageController::class, 's
 Route::get('/contact', [\App\Http\Controllers\CommentsController::class, 'index'])->name('contact');
 Route::post('/contact', [\App\Http\Controllers\CommentsController::class, 'search'])->name('search_contact');
 Route::get('/our_news', [\App\Http\Controllers\NewsController::class, 'create'])->name('news');
-
 Route::get('authorized/google', [LoginWithGoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('authorized/google/callback', [LoginWithGoogleController::class, 'handleGoogleCallback'])->name('google.callback');
 
 Route::middleware('guest')->group(function(){
-    Route::get('/login', [\App\Http\Controllers\SessionsController::class, 'create'])->name('inlogin');
-    Route::post('/login', [\App\Http\Controllers\SessionsController::class, 'store'])->name('login');
-    Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register'); //csak akkor erem le a registert ha nem vagyok bejelentkezve, vagyis ha guest vagyok
+    Route::get('/login', [\App\Http\Controllers\SessionsController::class, 'create'])->name('login');
+    Route::post('/login', [\App\Http\Controllers\SessionsController::class, 'store'])->name('inlogin');
+    Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register');
     Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store'])->name('inregister');
 });
 Route::middleware('auth')->group(function(){

@@ -16,7 +16,7 @@
                 <div class="news">
                     <h2  class="news_heading">{{$new->title}}</h2>
                     <p class="news_content">{{$new->content}}</p>
-                    <img class="news-img" src="{{asset('storage/'.$new->image)}}" alt="Kép">
+                    <img class="news-img" src="{{asset($new->image)}}" alt="Kép">
                     <div class="news_meta">
                         <p class="author">Szerző: {{$new->author}}</p>
                         <p style="color: #1a202c" class="date">{{ \Carbon\Carbon::parse($new->created_at)->format('Y-m-d H:i:s') }}</p>
