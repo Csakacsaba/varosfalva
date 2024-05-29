@@ -15,3 +15,4 @@ My goal is to modernize the old website of Városfalva village and provide a bet
 - CSS / Tailwind CSS
 - JavaScript
 - PHP
+- API
