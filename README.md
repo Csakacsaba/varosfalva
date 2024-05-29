@@ -12,7 +12,6 @@ My goal is to modernize the old website of Városfalva village and provide a bet
 
 ### Used Technologies:
 - HTML
-- CSS
+- CSS / Tailwind CSS
 - JavaScript
-- Tailwind CSS
 - PHP
