@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://home.oraseni.ro/" target="_blank">🌍 Városfalva honlap</a>
+  <a href="https://home.oraseni.ro/" target="_blank">🏡 Városfalva honlap</a>
 </p>
 
 ---
