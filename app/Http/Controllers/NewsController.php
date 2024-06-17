@@ -26,19 +26,17 @@ class NewsController extends Controller
 //    elmenti az uj letrehozott hirt az adatbazisba
     public function news_store(Request $request)
     {
-//        validalja a keres adatait
+//      validalja a keres adatait
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'author' => 'required|string|max:255',
             'image' => 'required|image|max:5048',
         ]);
-
-//  egyeni feltoltesi utvonalat kellett megadjak mert a szerveren nem mukodott maskepp
-//        feltolti a kepeket a 'pubic_uploads' mappaba es azon belul a 'news' mappaba
+//      egyeni feltoltesi utvonalat kellett megadjak mert a szerveren nem mukodott maskepp
+//      feltolti a kepeket a 'pubic_uploads' mappaba es azon belul a 'news' mappaba
         $imagePath = $request->file('image')->store('/news', ['disk'=> 'public_uploads']);
-
-//        letrehoz egy uj news objektumot es beallitja a mezoit
+//      letrehoz egy uj news objektumot es beallitja a mezoit
         $news = new News();
         $news->title = $validatedData['title'];
         $news->content = $validatedData['content'];
@@ -54,9 +52,7 @@ class NewsController extends Controller
 //hirek torlese
     public function news_delete(News $new)
     {
-//        torli a keresben kapott hirt
         $new->delete();
-//        visszairanyit az eredeti oldalra
         return redirect()->back();
     }
 }

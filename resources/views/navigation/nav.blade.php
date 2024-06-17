@@ -74,7 +74,6 @@
         document.querySelector(".date").innerHTML = ev + "-" + honap + "-" + nap;
         document.querySelector(".clock").innerHTML = "&nbsp &nbsp" + ora + ":" + perc + ":" + masodperc;
     }
-
     setInterval(updateDateTime, 100);
 
     // 55759d054f28b4bdd7c4fd23f3e70e8f      api key

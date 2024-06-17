@@ -55,7 +55,6 @@ class AdminController extends Controller
         $user->save();
         return back();
     }
-
 //    felhasznalo feloldasa
     public function unlock_user(User $user)
     {
